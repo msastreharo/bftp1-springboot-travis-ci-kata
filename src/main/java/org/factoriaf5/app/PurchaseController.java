@@ -38,4 +38,5 @@ public class PurchaseController {
     public PurchaseResponse getTotalPrice(@RequestBody PurchaseRequest request) {
         return new PurchaseResponse(request.getPurchase());
     }
+
 }

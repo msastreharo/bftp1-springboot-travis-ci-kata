@@ -54,9 +54,17 @@ class IntegrationTests {
                 .content("{ \"name\": \"camiseta\", \"price\": \"10.00\", \"name\": \"pantalón\", \"price\": \"30.00\" }"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.response", equalTo("Gracias por su compra. 2 productos por un total de 40 euros")));
-
     }
 
+ /*   @Test
+    void theServerRespondsToDiscountedItems() throws Exception {
 
+        server.perform(post("/products/buy")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{ \"name\": \"camiseta\", \"price\": \"10.00\", \"discountHalfPrice\": \"true\", \"name\": \"pantalón\", \"price\": \"30.00\" }"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.response", equalTo("Gracias por su compra. 2 productos por un total de 35 euros")));
+    }
+*/
 
 }
