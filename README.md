@@ -2,7 +2,7 @@
 
 Este proyecto sirve como ejemplo para practicar integración continua con Travis CI y hacer tests de integración.
 
-Haz un fork para trabajar con él.
+Haced un fork de este repositorio y trabajad todas con el mismo fork.
 
 
 ## Paso 1
