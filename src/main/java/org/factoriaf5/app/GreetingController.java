@@ -37,11 +37,11 @@ class GreetingResponse {
 
 @RestController
 public class GreetingController {
+
     @GetMapping("/hello")
     public GreetingResponse sayHello() {
         return new GreetingResponse();
     }
-
 
     @PostMapping("/hello")
     public GreetingResponse sayHello(@RequestBody GreetingRequest request) {

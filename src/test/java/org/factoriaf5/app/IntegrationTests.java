@@ -46,6 +46,17 @@ class IntegrationTests {
 
     }
 
+    @Test
+    void theServerRespondsToPurchase() throws Exception {
+
+        server.perform(post("/products/buy")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{ \"name\": \"camiseta\", \"price\": \"10.00\", \"name\": \"pantalón\", \"price\": \"30.00\" }"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.response", equalTo("Gracias por su compra. 2 productos por un total de 40 euros")));
+
+    }
+
 
 
 }
